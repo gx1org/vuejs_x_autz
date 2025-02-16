@@ -53,7 +53,7 @@ npm run dev
 - [VueJS docs](https://vuejs.org/guide/introduction.html)
 - [ExpressJS docs](https://expressjs.com/en/4x/api.html)
 - [Kunber docs](https://about-kunber.zone.id/p/docs)
-- [Gx1 Contact form](https://gx1.org/contact)
+- [Gx1 Contact form](https://gx1.org/#contact)
 
 ## Contributing
 
