@@ -1,5 +1,5 @@
 {
-  "name": "kunber-frontend",
+  "name": "autzorg-frontend",
   "version": "1.0.0",
   "scripts": {
     "dev": "vite --port 3001",

@@ -1,6 +1,6 @@
-# VueJS x Kunber
+# VueJS x Autz.org
 
-This is just an example of Kunber implementation with VueJS+ExpressJS Framework.
+This is just an example of Autz.org implementation with VueJS+ExpressJS Framework.
 
 ## How to run
 
@@ -36,8 +36,8 @@ npm run start
 
 Open another terminal, go to frontend folder and install dependencies
 ```bash
-# go to backend folder
-cd backend
+# go to frontend folder
+cd frontend
 
 # install
 npm install
@@ -52,8 +52,7 @@ npm run dev
 
 - [VueJS docs](https://vuejs.org/guide/introduction.html)
 - [ExpressJS docs](https://expressjs.com/en/4x/api.html)
-- [Kunber docs](https://about-kunber.zone.id/p/docs)
-- [Gx1 Contact form](https://gx1.org/contact)
+- [Autz.org docs](https://about.autz.org/p/docs)
 
 ## Contributing
 

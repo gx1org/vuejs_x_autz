@@ -3,7 +3,7 @@
 import { ref } from 'vue';
 import { apiReq, handleErrorApi } from '../helpers/fns';
 import { useAuthStore } from '../stores/auth';
-import { kunberAppID } from '../helpers/constant';
+import { autzorgAppID } from '../helpers/constant';
 import { useRouter } from 'vue-router';
 import { onMounted } from 'vue';
 
@@ -53,8 +53,8 @@ onMounted(() => {
     </div>
     <button class="btn btn-primary w-100 py-2" @click="loginBtn">Sign in</button>
     <p class="my-3 text-center text-muted">OR</p>
-    <a :href="`https://kunber.zone.id/onboarding/${kunberAppID}?callback_url=http://localhost:3001/authorize_kunber`" class="btn btn-outline-primary w-100 py-2">
-        Continue with Kunber &nearr;
+    <a :href="`https://autz.org/onboarding/${autzorgAppID}?callback_url=http://localhost:3001/authorize_autzorg`" class="btn btn-outline-primary w-100 py-2">
+        Continue with Autz.org
     </a>
   </div>
 </template>

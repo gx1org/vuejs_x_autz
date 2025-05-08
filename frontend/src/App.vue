@@ -8,6 +8,6 @@ const auth = useAuthStore()
 <template>
   <main class="form-signin w-100 m-auto" v-if="!auth.isLoading">
     <RouterView />
-    <p class="mt-5 mb-3 text-body-secondary">&copy; VueJS x Kunber</p>
+    <p class="mt-5 mb-3 text-body-secondary text-center">&copy; VueJS x Autz.org</p>
   </main>
 </template>

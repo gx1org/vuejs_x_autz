@@ -1,7 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import LoginView from '../views/LoginView.vue'
-import AuthorizeKunberView from '../views/AuthorizeKunberView.vue'
+import AuthorizeAutzorgView from '../views/AuthorizeAutzorgView.vue'
 import NotFoundView from '../views/NotFoundView.vue'
 import { useAuthStore } from '../stores/auth'
 
@@ -14,9 +14,9 @@ const router = createRouter({
       component: LoginView,
     },
     {
-      path: '/authorize_kunber',
-      name: 'AuthorizeKunber',
-      component: AuthorizeKunberView,
+      path: '/authorize_autzorg',
+      name: 'AuthorizeAutzorg',
+      component: AuthorizeAutzorgView,
     },
     {
       path: '/home',

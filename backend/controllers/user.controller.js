@@ -1,5 +1,5 @@
 const axios = require('axios');
-const { findKunberUser, generateToken, verifyToken } = require('./helper');
+const { findAutzorgUser, generateToken, verifyToken } = require('./helper');
 const knex = require('knex')({
   client: 'mysql',
   connection: {
@@ -47,20 +47,14 @@ const loginWithToken = async (req, res) => {
   })
 }
 
-const authorize_kunber = async (req, res) => {
+const authorize_autzorg = async (req, res) => {
   const authCode = req.body.auth_code
-  const appID = process.env.KUNBER_APP_ID
-  const appSecret = process.env.KUNBER_APP_SECRET
-  const userData = await axios.post(`https://kunber.zone.id/api/client/${appID}/exchange`, {
-    code: authCode
-  }, {
-    headers: {
-      Authorization: appSecret,
-    }
-  }).then(res => {
-    return res.data.data
+  const appID = process.env.AUTZORG_APP_ID
+  const url = `https://autz.org/api/client/${appID}/userinfo?code=${authCode}`
+  const userData = await axios.get(url).then(res => {
+    return res.data.user
   }).catch(e => {
-    console.error(e.response.data)
+    console.error(e)
     return null
   })
 
@@ -68,7 +62,7 @@ const authorize_kunber = async (req, res) => {
     return res.status(400).send({message: 'Invalid code'})
   }
 
-  const user = await findKunberUser(knex, userData)
+  const user = await findAutzorgUser(knex, userData)
   const token = generateToken(user)
   return res.send({
     user,
@@ -80,5 +74,5 @@ const authorize_kunber = async (req, res) => {
 module.exports = {
   login,
   loginWithToken,
-  authorize_kunber,
+  authorize_autzorg,
 }

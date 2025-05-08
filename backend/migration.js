@@ -16,14 +16,14 @@ async function main() {
   if (!hasTable) {
     await knex.schema.createTable('users', function (table) {
       table.increments();
-      table.string('name');
-      table.string('kunber_id');
-      table.string('email');
-      table.string('password');
-      table.string('phone');
-      table.string('address');
-      table.string('dob');
-      table.string('gender');
+      table.string('name', 191);
+      table.string('autzorg_id', 36);
+      table.string('email', 191);
+      table.string('password', 191);
+      table.string('phone', 36);
+      table.string('address', 191);
+      table.string('dob', 10);
+      table.string('gender', 10);
       table.timestamps();
     });
   }

@@ -1,14 +1,14 @@
 const jwt = require('jsonwebtoken');
-const jwtSecret = 'vuejs_kunber'
+const jwtSecret = 'vuejs_autzorg'
 
-async function findKunberUser(knex, userData) {
-  const user = await knex.table('users').where('kunber_id', userData.id).first()
+async function findAutzorgUser(knex, userData) {
+  const user = await knex.table('users').where('autzorg_id', userData.id).first()
   if (user) {
     return user
   }
 
   const newUser = {
-    kunber_id: userData.id,
+    autzorg_id: userData.id,
     name: userData.name,
     email: userData.email,
     password: userData.password,
@@ -40,6 +40,6 @@ function verifyToken(token) {
 
 module.exports = {
   generateToken,
-  findKunberUser,
+  findAutzorgUser,
   verifyToken
 }
